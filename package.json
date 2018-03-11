@@ -1,0 +1,31 @@
+{
+  "name": "react-redux-learning",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "happou31 <happo31@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^16.0.40",
+    "@types/react-dom": "16.0.4",
+    "@types/react-redux": "^5.0.15",
+    "@types/redux": "^3.6.0",
+    "@types/webpack": "^4.0.0",
+    "ts-loader": "^4.0.1",
+    "ts-node": "^5.0.1",
+    "typescript": "^2.7.2",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.10"
+  },
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2"
+  },
+  "scripts": {
+    "start": "webpack --watch",
+    "watch":
+      "webpack --watch --mode development --entry './src' --output dist/app.js --module-bind 'ts=ts-loader' --module-bind 'tsx=ts-loader' --resolve-extensions .ts,.tsx,.js",
+    "server": "ts-node server.js"
+  }
+}
