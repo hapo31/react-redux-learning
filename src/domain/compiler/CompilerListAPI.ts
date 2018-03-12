@@ -3,14 +3,14 @@ import { CompilerInfo } from "./CompilerAPIResponse";
 import * as path from "path";
 
 export default class CompilerListAPI {
-  static async fetch() {
+  static async fetch(): Promise<CompilerInfo[]> {
     const response = await fetch(
-      path.join(environment.URL.wandboxApiBaseurl, "compile.json"),
+      path.join(environment.URL.wandboxApiBaseurl, "list.json"),
       {
         method: "get",
         mode: "cors"
       }
     );
-    return (await response.json()) as CompilerInfo[];
+    return await response.json();
   }
 }

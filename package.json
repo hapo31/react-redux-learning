@@ -10,6 +10,10 @@
     "@types/react-redux": "^5.0.15",
     "@types/redux": "^3.6.0",
     "@types/webpack": "^4.0.0",
+    "css-loader": "^0.28.10",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
     "ts-loader": "^4.0.1",
     "ts-node": "^5.0.1",
     "typescript": "^2.7.2",
@@ -25,7 +29,7 @@
   "scripts": {
     "start": "webpack --watch",
     "watch":
-      "webpack --watch --mode development --entry './src' --output dist/app.js --module-bind 'ts=ts-loader' --module-bind 'tsx=ts-loader' --resolve-extensions .ts,.tsx,.js",
+      "webpack --watch --mode development --entry './src' --output dist/app.js --module-bind 'ts=ts-loader' --module-bind 'tsx=ts-loader' --resolve-extensions .ts,.tsx,.js --config webpack.config.dev.js",
     "server": "ts-node server.js"
   }
 }

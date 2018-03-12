@@ -3,6 +3,7 @@
     "module": "es2015",
     "target": "es5",
     "moduleResolution": "node",
+    "sourceMap": true,
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
