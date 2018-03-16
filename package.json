@@ -24,11 +24,11 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "tslib": "^1.9.0"
   },
   "scripts": {
-    "start": "webpack --watch",
-    "watch":
+    "start":
       "webpack --watch --mode development --entry './src' --output dist/app.js --module-bind 'ts=ts-loader' --module-bind 'tsx=ts-loader' --resolve-extensions .ts,.tsx,.js --config webpack.config.dev.js",
     "server": "ts-node server.js"
   }

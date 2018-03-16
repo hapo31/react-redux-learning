@@ -46,17 +46,19 @@ export class CompilerListComponent extends React.Component<
     );
   }
 
-  private onFetchButtonClick = async () => {
-    this.setState(
-      this.state.compilerList.update({
-        item: null
-      })
-    );
-    const response = await CompilerListAPI.fetch();
-    this.setState(
-      this.state.compilerList.update({
-        item: new CompilerList(response)
-      })
-    );
+  private onFetchButtonClick = () => {
+    return Promise.resolve().then(async () => {
+      this.setState(
+        this.state.compilerList.update({
+          item: null
+        })
+      );
+      const response = await CompilerListAPI.fetch();
+      this.setState(
+        this.state.compilerList.update({
+          item: new CompilerList(response)
+        })
+      );
+    });
   };
 }
